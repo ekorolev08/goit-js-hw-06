@@ -12,3 +12,5 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+for(let element of images) document.querySelector('.gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${element.url}" alt="${element.alt}"></li>`);
