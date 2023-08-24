@@ -13,4 +13,11 @@ const images = [
   },
 ];
 
-for(let element of images) document.querySelector('.gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${element.url}" alt="${element.alt}"></li>`);
+// for(let element of images) document.querySelector('.gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${element.url}" alt="${element.alt}"></li>`);
+
+const list = document.querySelector('.gallery')
+const liArray = images.map((image) => {
+return `<li><img src="${image.url}" alt="${image.alt}"/></li>`
+});
+const markup = liArray.join('');
+list.insertAdjacentHTML('beforeend', markup);
